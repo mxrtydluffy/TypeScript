@@ -10,11 +10,21 @@
 // Kaiju class that initializes it's properties!
 
 enum KaijuType { 
-	
+	lizard,
+	flying,
+	ape
 }
 
 class Kaiju {
-	
+	name: string
+	type: KaijuType
+	power: number
+
+	constructor(name: string, power: number, type: KaijuType) {
+		this.name = name
+		this.power = power
+		this.type = type
+	}
 }
 
 export {
