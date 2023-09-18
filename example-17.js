@@ -1,19 +1,17 @@
 // Giant Robot class
-// Goal creat an interface with a methods 
-// All Robots have name, power and type. 
-// Kaiju should have a describe method that 
-// prints: name:<name> type:<type> power:<power>
-// Timer with count
-// Goal creat a function that takes another function as an argument
-function setTimeoutCount(callback, time, count) {
-    var timer = setTimeout(function () {
-        count -= 1;
-        callback();
-        if (count === 0) {
-            clearTimeout(timer);
-        }
-    }, time);
-}
-setTimeoutCount(function () {
-    console.log('???');
-}, 1000, 3);
+// Create class
+var Kaiju = /** @class */ (function () {
+    function Kaiju(name, power, type) {
+        this.name = name;
+        this.power = power;
+        this.type = type;
+    }
+    // method
+    Kaiju.prototype.describe = function () {
+        console.log("name: ".concat(this.name, " type: ").concat(this.type, " power: ").concat(this.power));
+    };
+    return Kaiju;
+}());
+// Print
+var kaiju = new Kaiju("Katsuyu", 50000, "Healer");
+kaiju.describe();

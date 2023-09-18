@@ -7,7 +7,7 @@
 // prints: name:<name> type:<type> power:<power>
 
 interface Robot {
-    name string;
+    name: string;
     power: number;
     type: string;
 }
