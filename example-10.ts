@@ -47,7 +47,7 @@ class Student extends Person {
 		super(name, age)
 		this.cohort = cohort;
 	}
-}
+}``
 
 enroll(course: Course) {
 	this.courses.push(course)

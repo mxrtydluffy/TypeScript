@@ -5,27 +5,27 @@
 
 // This function takes a callback that receives a string. 
 
-function callYouLater(callback, time) {
+function callYouLater(callback: (messsage: string) => void, time: number) {
 	setTimeout(() => {
-	  callback('What it be like?')
-	}, time)
+	  callback("What it be like?");
+	}, time);
 }
 
-
+// interface CallbackResult {
+// 	success: boolean;
+// 	probablity: number;
+// }
 
 function callMeMaybe(callback, probability) {
 	setTimeout(() => {
 		if (Math.random() * 100 < probability) {
-		  return callback({ success: true, probability })
+		  return callback({ success: true, probability });
 		}
-		callback({ success: false, probability })
-	}, 1000)
+		callback({ success: false, probability });
+	}, 1000);
 }
-
-// 
-
 
 export {
   callYouLater,
   callMeMaybe
-}
+};

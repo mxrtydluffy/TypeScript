@@ -13,12 +13,13 @@ import Person, { Course, Student } from './example-10.js'
 // Write an interface with name and age
 
 interface Human {
-
+	name: string;
+	age: number;
 }
 
-const amy: Human = new Student('Amy', 21)
-const bob: Human = new Person('Bob', 32)
-const cat: Human = new Student('Cat', 43)
+const amy: Human = new Student('Amy', 21, ["senior"]);
+const bob: Human = new Person('Bob', 32);
+const cat: Human = new Student('Cat', 43, ["junior"]);
 
 // Use the interface to make an array that 
 // holds both types: Person and Student 
@@ -27,7 +28,7 @@ const allPeople: Human[] = [
 	amy, 
 	bob,
 	cat
-]
+];
 
 
 
