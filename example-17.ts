@@ -22,7 +22,6 @@ class Kaiju implements Robot {
     }
 }
 
-
 // Print
 const kaiju = new Kaiju("Katsuyu", 50000, "Healer");
 kaiju.describe();

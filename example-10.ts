@@ -6,17 +6,17 @@
 // Complete the Course class below. 
 
 class Person {
-	name: string;
-	age: number;
+	name: string
+	age: number
 
 	constructor(name, age) {
-		this.name = name;
-		this.age = age;
+		this.name = name
+		this.age = age
 	}
 
 	describe(): string {
-		return `${this.name} is ${this.age}`;
-	}
+		return `${this.name} is ${this.age}`
+	};
 }
 
 const joe = new Person("Joe", 33);
@@ -24,7 +24,7 @@ const joe = new Person("Joe", 33);
 // Define a Course. A Course a title: string and a units: number
 
 class Course {
-	title: string,
+	title: string;
 	units: number;
 
 	constructor(title: string, units: number) {
@@ -47,14 +47,11 @@ class Student extends Person {
 		super(name, age)
 		this.cohort = cohort;
 	}
-}``
 
-enroll(course: Course) {
-	this.courses.push(course)
+	enroll(course: Course) {
+		this.courses.push(course)
+	};
 }
 
 export default Person;
 export { Course, Student };
-
-
-
